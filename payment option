@@ -1,0 +1,11 @@
+PAYMENT OPTION
+ 
+ON CASH ON DELIEVERY BUTTON:
+new payment1().setVisible(true);
+this.setVisible(false);
+ON CREDIT CARD BUTTON:
+new payment2().setVisible(true);
+this.setVisible(false);
+ON NET BANKING BUTTON:
+new payment1().setVisible(true);
+this.setVisible(false);
