@@ -1,0 +1,29 @@
+1.	REGISTER form     
+ 
+ON LOGIN BUTTON:
+new login().setVisible(true);
+ this.setVisible(false);
+ON SUBMIT BUTTON:
+String n=nm.getText();
+        String ed=ei.getText();
+        String pwd=new String(pd.getPassword());
+        String s;
+              if (f.isSelected()){
+                 s=f.getText();
+      } else{ s=m.getText();}
+String contact=cn.getText();
+String address=ad.getText();
+Object city=ct.getSelectedItem();
+try {
+      Class.forName("com.mysql.jdbc.Driver");
+     Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/mobile","root","raveena");
+    Statement stmt=conn.createStatement();
+ String sql="Insert into register  VALUES('"+n+"','"+ed+"','"+pwd+"','"+s+"','"+contact+"','"+address+"','"+city+"')";
+     stmt.executeUpdate(sql);
+     dp.setText("REGISTERED SUCCESSFULLY");
+    stmt.close();
+     conn.close();  
+        }
+        catch(Exception e){dp.setText("Incorrect Entry");}
+IMPORTED PACKAGES:
+import java.sql.*;
