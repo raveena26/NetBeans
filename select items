@@ -1,0 +1,13 @@
+3.	SELECT ITEMS
+ 
+ON BATTERIES BUTTON:
+new batteries().setVisible(true);
+this.setVisible(false);
+ON BATTERY CHARGERS BUTTON:
+new battery_chargers().setVisible(true);
+this.setVisible(false); 
+ON CASES AND CABLES BUTTON:
+new cnc().setVisible(true);
+this.setVisible(false); 
+          SIMILAR CODING ON ALL REMAINING BUTTONS
+ 
