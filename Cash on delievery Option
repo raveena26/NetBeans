@@ -1,0 +1,52 @@
+CASH ON DELIEVERY
+ 
+ON SUBMIT BUTTON:
+  String ed=ei.getText();
+           try {
+      Class.forName("com.mysql.jdbc.Driver");
+     Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/mobile","root","raveena");
+    Statement stmt=conn.createStatement();
+String sql1="Select address,city,contact from register where email='"+ed+"';";
+ResultSet rs1=stmt.executeQuery(sql1);
+while (rs1.next()){
+String ad=rs1.getString("address");
+String ct=rs1.getString("city");
+String c=rs1.getString("contact");
+ta.setText(ad+"   "+ct);
+cn.setText(c);
+}
+String sql="Select * from purchase;";
+ResultSet rs=stmt.executeQuery(sql);
+while (rs.next()){
+String it=rs.getString("Item");
+String pr=rs.getString("price");
+lb.setText(it);
+lb1.setText(pr);
+ap.setText(pr);
+}
+rs.close();
+rs1.close();
+    stmt.close();
+     conn.close();  
+        }
+        catch(Exception e){JOptionPane.showMessageDialog(null,"Incorrect Entry");}
+
+ON PLACE ORDER BUTTON:
+try {
+      Class.forName("com.mysql.jdbc.Driver");
+     Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/mobile","root","raveena");
+    Statement stmt=conn.createStatement();
+    String sql2="delete from purchase;";
+        stmt.executeUpdate(sql2);
+stmt.close();
+     conn.close();  
+        }
+        catch(Exception e){JOptionPane.showMessageDialog(null,"Incorrect Entry");}
+         new thanx().setVisible(true);
+        this.setVisible(false);
+        
+    }   
+
+IMPORTED PACKAGES:
+import java.sql.*;
+import javax.swing.JOptionPane;
