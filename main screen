@@ -1,0 +1,11 @@
+(Welcome Screen)
+
+ON REGISTER BUTTON: 
+new register().setVisible(true);
+ this.setVisible(false);
+ON LOGIN BUTTON: 
+new login().setVisible(true);
+ this.setVisible(false);
+ON EXIT BUTTON: 
+System.exit(0);
+ 
