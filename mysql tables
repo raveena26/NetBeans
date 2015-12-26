@@ -1,0 +1,41 @@
+                                              TABLES CREATED
+1.	PURCHASE
+
+Name of column	Type	Size
+1.ITEM	VARCHAR	50
+2.PRICE	char	30
+
+
+2.	REGISTER
+
+Name of column	Type	Size
+1.NAME	CHAR	20
+2.EMAIL	VARCHAR	50
+3.PWD	VARCHAR	30
+4.SEX	CHAR	8
+5.CONTACT	CHAR	20
+6.ADDRESS	VARCHAR	100
+7.CITY	CHAR	20
+
+TABLE CREATION COMMANDS IN MYSQL:
+1.Create table register(name char(20) NOT NULL,
+email varchar(50) NOT NULL,
+pwd varchar(30),
+sex char(8),\
+contact char(20),
+address varchar(100),
+city char (20));
+2.Create table purchase(item varchar(50),price char(30));
+
+GRAPHICAL CONTROLS USED IN SWING GUI JAVA APPLICATION
+
+jLabel
+jTextfield
+jButton
+jTextArea
+jRadioButton
+jcombobox
+jcheckbox
+jPasswordfield
+jPanel
+                                         buttongroup
