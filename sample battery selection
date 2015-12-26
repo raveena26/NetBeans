@@ -1,0 +1,32 @@
+	BATTERIES TO BE SELECTED
+ 
+ON BACK BUTTON:
+new select_items().setVisible(true);
+this.setVisible(false);
+ON PURCHASE BUTTON:
+String p = null;
+        String s = null;
+     if (l1.isSelected())   {      
+         s=l1.getText(); 
+     p=p1.getText();   }  
+        else if (l2.isSelected()) {   s=l2.getText(); p=p2.getText(); }
+     else if (l3.isSelected()) {   s=l3.getText(); p=p3.getText(); }
+4 else if (l4.isSelected()) {   s=l4.getText(); p=p4.getText(); }
+     else if (l5.isSelected()) {   s=l5.getText(); p=p5.getText(); }
+     else {
+         JOptionPane.showMessageDialog(null,"Please select any ITEM");}
+         try {
+  Class.forName("java.sql.Driver");
+  Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/mobile","root","raveena");
+  Statement stmt=conn.createStatement();
+            String sql="Insert into purchase VALUES('"+s+"', '"+p+"')";
+            stmt.executeUpdate(sql);
+            stmt.close();
+            conn.close();
+        }
+        catch(Exception e){JOptionPane.showMessageDialog(null,"Incorrect Entry");}
+        new payment().setVisible(true);
+        this.setVisible(false);
+IMPORTED PACKAGES:
+import java.sql.*;
+import javax.swing.JOptionPane;
